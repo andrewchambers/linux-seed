@@ -3,16 +3,17 @@
 set -x
 
 pkgs="
-  dash
   coreutils
-  gzip
+  dash
+  diffutils
+  gawk
   grep
+  gzip
+  make
   patch
   sed
   tar
   xz
-  diffutils
-  make
 "
 
 for pkg in $pkgs
