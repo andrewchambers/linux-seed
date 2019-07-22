@@ -21,7 +21,7 @@ The environment contains a statically linked gcc with musl libc and the followin
 - coreutils
 - diffutils
 - gawk
-- gcc
+- gcc/g++
 - grep
 - gzip
 - make

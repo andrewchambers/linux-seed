@@ -33,7 +33,7 @@ unpacksrc () {
 #
 # Once musl is installed we can go back and do
 # a full build of gcc building all the rest of
-# the things that depending on libc.
+# the things that depend on libc.
 #
 buildgcc () {
   buildstartdir="$(pwd)"
