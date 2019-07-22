@@ -39,5 +39,5 @@ By default when the build finishes you will have a non relocateable install at $
 
 # Notes
 
-- The build system is based on https://github.com/apenwarr/redo, however the project doesn't require this thans to './support/do'.
+- The build system is based on https://github.com/apenwarr/redo, however the project doesn't require this thanks to './support/do'.
 - Most patches in the patches directory came from either Nixos or https://github.com/richfelker/musl-cross-make/.
