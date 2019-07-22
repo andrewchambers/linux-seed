@@ -1,4 +1,4 @@
-image: nixos
+image: nixos/latest
 sources:
   - https://github.com/andrewchambers/linux-seed
 tasks:
