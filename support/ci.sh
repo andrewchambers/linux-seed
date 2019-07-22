@@ -1,5 +1,5 @@
 #! /bin/sh
-set -eu
+set -eux
 
 sudo mkdir -p /opt/linux-seed
 sudo chown $(whoami) /opt/linux-seed 
