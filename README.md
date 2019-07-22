@@ -37,7 +37,6 @@ Edit config.inc to match your preferences, then run ./build.sh
 
 By default when the build finishes you will have a non relocateable install at $projectroot/output.
 
-
 # Notes
 
 - The build system is based on https://github.com/apenwarr/redo, however the project doesn't require this thans to './support/do'.

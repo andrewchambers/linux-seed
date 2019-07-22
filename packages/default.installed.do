@@ -2,16 +2,24 @@
 
 set -x
 
-redo-ifchange ../sources/fetched.done
+redo-ifchange ../sources/sources.done
+redo-ifchange ../toolchain/toolchain.done
 
-prefix="$(pwd)/prefix"
+export PATH="$FINAL_OUTPUT/bin:$PATH"
+
+export CC=x86_64-linux-musl-gcc
+export CXX=x86_64-linux-musl-g++
+export AR=x86_64-linux-musl-ar
+export LD=x86_64-linux-musl-ld
+
+prefix="$FINAL_OUTPUT"
 tarball="$(realpath ../sources/$2-*)"
 packagefullname="$(archivename2packagename "$tarball")"
 patchdir="$(realpath "../patches/$packagefullname")"
 
-rm -rf "./${targetbase}_src/"
-mkdir "./${targetbase}_src/"
-cd "./${targetbase}_src/"
+rm -rf "./${targetbase}_build/"
+mkdir "./${targetbase}_build/"
+cd "./${targetbase}_build/"
 tar xf "$tarball"
 cd *
 

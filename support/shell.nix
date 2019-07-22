@@ -1,4 +1,4 @@
-/* This file defines the build environment used for testing.
+/* This file defines the build environment used for testing and CI.
    You can ignore it if you don't know what nix is. */
 let 
   pkgs = import (builtins.fetchTarball {
