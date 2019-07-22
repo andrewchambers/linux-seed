@@ -49,3 +49,4 @@ By default when the build finishes you will have a non relocatable install at $p
 - Make the patching of the dynamic linker more fine grained so we don't need to regenerate as many files (autoconf etc). This should shrink
   the required build time dependencies. Since nix handles these quite well for us in CI, it isn't the biggest deal.
 - Cross compiling a seed for other targets? Maybe use bin_fmt_misc and qemu to build arm binaries?
+- Work out why we need bison2 in CI, the problem is with gcc/intl/plurals.c being regenerated.

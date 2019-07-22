@@ -8,7 +8,7 @@ let
 in
   pkgs.mkShell {
       buildInputs = with pkgs; [ 
-        gcc wget git flex bison file automake autoconf autoconf-archive texinfo
+        gcc wget git flex bison2 file automake autoconf autoconf-archive texinfo
       ];
       hardeningDisable = ["all"];
   }

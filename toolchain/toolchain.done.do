@@ -51,9 +51,9 @@ buildgcc () {
   unpacksrc gmp
   unpacksrc mpc
   unpacksrc mpfr
+  cd ..
   dynlinker="$(echo "$(realpath -m "$prefix/lib/ld-musl-x86_64.so.1")")"
   find . -type f -exec sed -i "s,/lib/ld-musl-x86_64.so.1,$dynlinker,g" "{}" \;
-  cd ..
   cd linux
   make ARCH=x86_64 O="$sysroot" headers_install
   cd ..
