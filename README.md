@@ -37,7 +37,7 @@ The build software does not have any dependency on any host system files other t
 
 Edit config.inc to match your preferences, then run ./build.sh
 
-By default when the build finishes you will have a non relocateable install at $projectroot/output.
+By default when the build finishes you will have a non relocatable install at $projectroot/output.
 
 # Notes
 

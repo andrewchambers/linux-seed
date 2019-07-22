@@ -1,3 +1,4 @@
+arch: x86_64
 image: nixos/latest
 sources:
   - https://github.com/andrewchambers/linux-seed
