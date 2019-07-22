@@ -1,0 +1,8 @@
+image: nixos
+sources:
+  - https://github.com/andrewchambers/linux-seed
+tasks:
+  - build: |
+      cd linux-seed
+      ./support/ci.sh
+

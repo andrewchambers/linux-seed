@@ -26,5 +26,5 @@ then
   ./configure --prefix="$prefix"
 fi
 
-make install PREFIX="$prefix"
+make -j $(nproc) install PREFIX="$prefix"
 touch "$out"
