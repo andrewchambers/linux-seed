@@ -43,3 +43,9 @@ By default when the build finishes you will have a non relocatable install at $p
 
 - The build system is based on https://github.com/apenwarr/redo, however the project doesn't require this thanks to './support/do'.
 - Most patches in the patches directory came from either Nixos or https://github.com/richfelker/musl-cross-make/.
+
+# Ideas/Improvements
+
+- Make the patching of the dynamic linker more fine grained so we don't need to regenerate as many files (autoconf etc). This should shrink
+  the required build time dependencies. Since nix handles these quite well for us in CI, it isn't the biggest deal.
+- Cross compiling a seed for other targets? Maybe use bin_fmt_misc and qemu to build arm binaries?

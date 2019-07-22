@@ -13,6 +13,9 @@ unpacksrc () {
   tarball="$(echo $sources/$name-*)"
   mkdir "$name"
   tar -C "$name" --strip-components 1 -xf "$tarball"
+  cd "$name"
+  applydirpatches "$patches/$(archivename2packagename "$tarball")"
+  cd ..
 }
 
 # Build gcc following a someone hairy and complicated
@@ -48,12 +51,10 @@ buildgcc () {
   unpacksrc gmp
   unpacksrc mpc
   unpacksrc mpfr
-  applydirpatches "$patches/$(archivename2packagename $(echo $sources/gcc-*))"
   dynlinker="$(echo "$(realpath -m "$prefix/lib/ld-musl-x86_64.so.1")")"
   find . -type f -exec sed -i "s,/lib/ld-musl-x86_64.so.1,$dynlinker,g" "{}" \;
   cd ..
   cd linux
-  sed 's,/bin/pwd,pwd,g' -i Makefile
   make ARCH=x86_64 O="$sysroot" headers_install
   cd ..
   mkdir objdir

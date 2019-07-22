@@ -44,8 +44,12 @@ archivename2packagename () {
 
 # Apply all patches in specified directory
 applydirpatches () {
+  if ! test -d "$1"
+  then
+    return
+  fi
   for p in $(find "$1" -name '*.patch' -or -name '*.diff')
   do
-    patch -t -p0 < $p || patch -t -p1 < $p
+    patch -t -p1 < $p || patch -t -p0 < $p
   done 
 }
