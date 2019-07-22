@@ -1,5 +1,7 @@
 # linux-seed
 
+[![builds.sr.ht status](https://builds.sr.ht/~ach/linux-seed/nixos.yml.svg)](https://builds.sr.ht/~ach/linux-seed/nixos.yml?)
+
 This project is a build script to build a small dependency free statically linked environment for x86_64 linux.
 
 Using a toolchain built using this script, it should then be possible to start from a known point in building
