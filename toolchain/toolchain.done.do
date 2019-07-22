@@ -126,8 +126,6 @@ buildgcc () {
   # libgcc build can finish is broken.
 
   configure_gcc
-  make -j $(nproc) all-gcc all-target-libgcc
-  make install-target-libgcc
   make -j $(nproc)
   make install
 
