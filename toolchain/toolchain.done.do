@@ -40,7 +40,7 @@ unpacksrc () {
 #
 buildgcc () {
   buildstartdir="$(pwd)"
-  rm -rf "$prefix" "$builddir"
+  rm -rf "$builddir"
   mkdir "$builddir"
   cd "$builddir"
   unpacksrc binutils
